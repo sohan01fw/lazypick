@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x, 20.x]
+        node-version: [16.x, 18.x, 20.x]
 
     steps:
       - name: Checkout code
@@ -28,7 +28,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.yarn
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/yarn.lock') }}-${{ github.run_id }}  # Added github.run_id to ensure unique key
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/yarn.lock') }}-${{ github.run_id }} # Added github.run_id to ensure unique key
           restore-keys: |
             ${{ runner.OS }}-node-
 
