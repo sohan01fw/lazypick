@@ -1,6 +1,5 @@
-const {relative} = require("path");
-
-const {ESLint} = require("eslint");
+import { relative } from "path";
+import { ESLint } from "eslint";
 
 const removeIgnoredFiles = async (files) => {
   const cwd = process.cwd();
@@ -12,15 +11,22 @@ const removeIgnoredFiles = async (files) => {
   return filteredFiles.join(" ");
 };
 
-module.exports = {
-  "**/*.{js,ts,jsx,tsx}": async (files) => {
+export default {
+  "**/*.{js,mjs,cjs,ts,jsx,tsx}": async (files) => {
     const filesToLint = await removeIgnoredFiles(files);
-
-    return [`eslint -c .eslintrc.json --max-warnings=0 --fix ${filesToLint}`];
+    
+    if (!filesToLint) return []; // Avoid running the command if no files to lint
+    
+    return [
+      `eslint -c .eslintrc.json --max-warnings=0 --fix ${filesToLint}`,
+      `prettier --config .prettierrc.json --write ${filesToLint}`
+    ];
   },
   "**/*.css": async (files) => {
     const filesToLint = await removeIgnoredFiles(files);
-
-    return [`prettier --config .prettierrc.json --ignore-path --write ${filesToLint}`];
+    
+    if (!filesToLint) return []; // Avoid running the command if no files to format
+    
+    return [`prettier --config .prettierrc.json --write ${filesToLint}`];
   },
 };
