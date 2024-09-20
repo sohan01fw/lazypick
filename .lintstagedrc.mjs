@@ -14,19 +14,19 @@ const removeIgnoredFiles = async (files) => {
 export default {
   "**/*.{js,mjs,cjs,ts,jsx,tsx}": async (files) => {
     const filesToLint = await removeIgnoredFiles(files);
-    
+
     if (!filesToLint) return []; // Avoid running the command if no files to lint
-    
+
     return [
-      `eslint -c .eslintrc.json --max-warnings=0 --fix ${filesToLint}`,
-      `prettier --config .prettierrc.json --write ${filesToLint}`
+      `eslint -c eslint.config.mjs --max-warnings=0 --fix ${filesToLint}`,
+      `prettier --config .prettierrc.json --write ${filesToLint}`,
     ];
   },
   "**/*.css": async (files) => {
     const filesToLint = await removeIgnoredFiles(files);
-    
+
     if (!filesToLint) return []; // Avoid running the command if no files to format
-    
+
     return [`prettier --config .prettierrc.json --write ${filesToLint}`];
   },
 };

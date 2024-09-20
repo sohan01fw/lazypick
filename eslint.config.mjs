@@ -16,21 +16,21 @@ export default [
   {
     plugins: {
       prettier: eslintPluginPrettier, // Using 'prettier' here for ESLint-Prettier integration
-      unusedImports,                  // Detects unused imports
-      tailwindcss: tailwind,           // Ensure the Tailwind plugin is activated
+      unusedImports, // Detects unused imports
+      tailwindcss: tailwind, // Ensure the Tailwind plugin is activated
     },
     rules: {
       // General formatting rules
-      quotes: ["error", "double"],    // Enforce double quotes
-      semi: "error",                  // Enforce semicolons
+      quotes: ["error", "double"], // Enforce double quotes
+      semi: "error", // Enforce semicolons
       "jsx-quotes": ["error", "prefer-double"],
-      "prefer-const": "error",        // Prefer `const` over `let` where possible
-      "no-console": "warn",           // Warn about `console` statements
-      "no-undef": "error",            // Disallow undefined variables
+      "prefer-const": "error", // Prefer `const` over `let` where possible
+      "no-console": "warn", // Warn about `console` statements
+      "no-undef": "error", // Disallow undefined variables
 
       // React-specific rules
-      "react/prop-types": "off",      // Disables prop-types checks (often used with TypeScript)
-      "react/jsx-uses-react": "off",  // React 17+ doesn't require React in scope
+      "react/prop-types": "off", // Disables prop-types checks (often used with TypeScript)
+      "react/jsx-uses-react": "off", // React 17+ doesn't require React in scope
       "react/react-in-jsx-scope": "off", // Same as above
       "react-hooks/exhaustive-deps": "off", // Disabling exhaustive deps warnings
 
@@ -38,9 +38,9 @@ export default [
       "no-unused-vars": "off",
 
       // Tailwind rules
-      "tailwindcss/classnames-order": "warn",  // Ensures Tailwind classes are ordered properly
+      "tailwindcss/classnames-order": "warn", // Ensures Tailwind classes are ordered properly
       "tailwindcss/no-custom-classname": "off", // Allows custom class names
-      "tailwindcss/no-contradicting-classname": "error",  // Detects contradicting Tailwind classes
+      "tailwindcss/no-contradicting-classname": "error", // Detects contradicting Tailwind classes
     },
 
     settings: {
@@ -52,20 +52,20 @@ export default [
       // Tailwind CSS settings
       tailwindcss: {
         callees: ["classnames", "clsx", "ctl"], // Functions that process class names
-        config: "tailwind.config.js",           // Path to the Tailwind configuration
+        config: "tailwind.config.js", // Path to the Tailwind configuration
         cssFiles: [
-          "**/*.css",                           // Scan all CSS files
-          "!**/node_modules",                   // Exclude node_modules
-          "!**/.*",                             // Exclude dot files
-          "!**/dist",                           // Exclude dist directory
-          "!**/build",                          // Exclude build directory
+          "**/*.css", // Scan all CSS files
+          "!**/node_modules", // Exclude node_modules
+          "!**/.*", // Exclude dot files
+          "!**/dist", // Exclude dist directory
+          "!**/build", // Exclude build directory
         ],
-        cssFilesRefreshRate: 5000,              // How often to refresh CSS files (milliseconds)
-        removeDuplicates: true,                 // Removes duplicate classes
-        skipClassAttribute: false,              // Do not skip the `class` attribute
-        whitelist: [],                          // Add custom classnames to whitelist if needed
-        tags: [],                               // Custom tags for specific Tailwind usage
-        classRegex: "^class(Name)?$",           // Matches `class` or `className` attributes
+        cssFilesRefreshRate: 5000, // How often to refresh CSS files (milliseconds)
+        removeDuplicates: true, // Removes duplicate classes
+        skipClassAttribute: false, // Do not skip the `class` attribute
+        whitelist: [], // Add custom classnames to whitelist if needed
+        tags: [], // Custom tags for specific Tailwind usage
+        classRegex: "^class(Name)?$", // Matches `class` or `className` attributes
       },
     },
   },
