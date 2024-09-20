@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint -c eslint.config.mjs \"src/**/*.{js,jsx,ts,tsx,test.tsx,json,css,md}\"",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,test.tsx,json,css,md}\"",
-    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,test.tsx,json,css,md}\"",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,test.tsx,json,css,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,test.tsx,json,css,md}\"",
     "test": "jest --verbose --config ./jest.config.ts",
     "lint-staged": "lint-staged"
   },
