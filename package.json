@@ -9,8 +9,8 @@
     "lint": "eslint -c eslint.config.mjs \"src/**/*.{js,jsx,ts,tsx,test.tsx,json,css,md}\"",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,test.tsx,json,css,md,mjs}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,test.tsx,json,css,md,mjs}\"",
-    "test": "jest --verbose --config ./jest.config.ts"
-    
+    "test": "jest --verbose --config ./jest.config.ts",
+    "prepare": "husky"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
