@@ -9,7 +9,8 @@
     "lint": "eslint -c eslint.config.mjs \"src/**/*.{js,jsx,ts,tsx,test.tsx,json,css,md}\"",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,test.tsx,json,css,md}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,test.tsx,json,css,md}\"",
-    "test": "jest --verbose --config ./jest.config.ts"
+    "test": "jest --verbose --config ./jest.config.ts",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
@@ -41,6 +42,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.36.1",
     "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-tailwindcss": "^3.17.4",
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.9.0",
     "husky": "^9.1.6",
@@ -51,7 +53,7 @@
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
-    "typescript": "4.7.4",
+    "typescript": "^5.6.2",
     "typescript-eslint": "^8.6.0"
   }
 }
