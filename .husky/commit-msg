@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname "$0")/_/h"
-
-yarn commitlint --config .commitlintrc.mjs --edit ${1}

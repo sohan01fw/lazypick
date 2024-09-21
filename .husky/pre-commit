@@ -1,1 +1,4 @@
-yarn lint-staged 
+#!/bin/bash
+
+yarn lint-staged -c .lintstagedrc.mjs
+

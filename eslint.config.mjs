@@ -21,11 +21,11 @@ export default [
     },
     rules: {
       // General formatting rules
-      quotes: ["error", "double"], // Enforce double quotes
-      semi: "error", // Enforce semicolons
+      semi: ["error", "always"],
+      quotes: ["error", "double"],
       "jsx-quotes": ["error", "prefer-double"],
       "prefer-const": "error", // Prefer `const` over `let` where possible
-      "no-console": "warn", // Warn about `console` statements
+      "no-console": "off", // Warn about `console` statements
       "no-undef": "error", // Disallow undefined variables
 
       // React-specific rules

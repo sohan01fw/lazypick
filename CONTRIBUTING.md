@@ -11,14 +11,17 @@ Thank you for considering contributing to lazypick! We're excited to collaborate
 ## Guidelines 📝
 
 ### 1. Fork the Repository 🍴
+
 - First, click the **'Fork'** button in the upper right corner of the repository's GitHub page.
 - This will create a copy of the repository in your GitHub account.
 
 ### 2. Clone the Repository 📂
+
 - Clone your forked repository to your local machine using the following commands:
   ```bash
   git clone https://github.com/yourusername/lazypick.git
   cd lazypic
+  ```
 
 3. Make Changes. Make your desired changes and ensure that your code adheres to our coding standards.
 
@@ -29,8 +32,9 @@ Thank you for considering contributing to lazypick! We're excited to collaborate
 6. Push Changes: Push your changes to your forked repository.
    ```bash
    git push origin branch-name
+   ```
 
-Now, aftering pushing it visit to the link appear in your terminal 
+Now, aftering pushing it visit to the link appear in your terminal
 
 7. Fill the pull request template the necessary details and leave to review and get merged!
 
