@@ -12,7 +12,7 @@ const removeIgnoredFiles = async (files) => {
 };
 
 export default {
-  "**/*.{js,mjs,cjs,ts,jsx,tsx}": async (files) => {
+  "**/*.{js,mjs,cjs,ts,jsx,tsx,md,yml}": async (files) => {
     const filesToLint = await removeIgnoredFiles(files);
 
     if (!filesToLint) return []; // Avoid running the command if no files to lint
