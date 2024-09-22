@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const SearchInputFormSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+  productname: z.string().min(2, {
+    message: "product name must be at least 2 characters.",
   }),
 });

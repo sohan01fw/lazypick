@@ -4,24 +4,18 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { SearchInputFormSchema } from "@/lib/zod";
+import { useRouter } from "next/navigation";
 
 export function InputSearchForm() {
+  const router = useRouter();
+
   const form = useForm<z.infer<typeof SearchInputFormSchema>>({
     resolver: zodResolver(SearchInputFormSchema),
     defaultValues: {
-      username: "",
+      productname: "",
     },
   });
 
@@ -29,26 +23,24 @@ export function InputSearchForm() {
   function onSubmit(values: z.infer<typeof SearchInputFormSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+    if (!values) return null;
+    router.push(`/searchproduct/${values?.productname}`);
   }
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
-          name="username"
+          name="productname"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="search the product u want..." {...field} />
               </FormControl>
-              <FormDescription>This is your public display name.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
       </form>
     </Form>
   );
