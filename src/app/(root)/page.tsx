@@ -1,4 +1,4 @@
-import { InputSearchForm } from "@/components/pages/Home/InputSearchForm";
+import { InputSearchForm } from "@/components/pages/root/InputSearchForm";
 import React from "react";
 
 export default function Home() {
