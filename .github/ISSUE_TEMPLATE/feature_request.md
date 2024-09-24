@@ -19,10 +19,6 @@ Ex. I'm always frustrated when [...]
 
 A clear and concise description of what you want to happen.
 
-## 🔄 Alternatives Considered
-
-A clear and concise description of any alternative solutions or features you've considered.
-
 ## 📊 User Impact
 
 How would this feature benefit users? Please provide any relevant metrics or user stories.
@@ -30,18 +26,6 @@ How would this feature benefit users? Please provide any relevant metrics or use
 ## 🖼️ Mockups / Screenshots
 
 If applicable, add mockups or screenshots to help explain your feature.
-
-## 🧩 Additional Context
-
-Add any other context or screenshots about the feature request here.
-
-## 📋 Implementation Checklist
-
-- [ ] Frontend changes
-- [ ] Backend changes
-- [ ] Database changes
-- [ ] API modifications
-- [ ] Documentation updates
 
 ## 🔗 Related Issues / PRs
 

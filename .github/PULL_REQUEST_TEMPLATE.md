@@ -4,17 +4,13 @@
 
 <!-- Provide a brief description of the changes in this PR -->
 
-## 🎯 Type of Change
+## 📝 Current behaviour (updates)
 
-<!-- Mark the appropriate option(s) with an "x" -->
+<!-- Please describe the current behavior that you are modifying -->
 
-- [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
-- [ ] ✨ New feature (non-breaking change which adds functionality)
-- [ ] 💥 Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] 📚 Documentation update
-- [ ] 🧹 Code refactor
-- [ ] 🔧 Configuration change
-- [ ] 🏗️ Build/CI pipeline changes
+## 🚀 Current behaviour (updates)
+
+<!-- Please describe the current behavior that you are modifying -->
 
 ## 🧪 How Has This Been Tested?
 
@@ -27,7 +23,3 @@
 ## 📊 Impact (yes/no)
 
 <!-- if yes Describe the impact of these changes on the project or users -->
-
-## 📌 Additional Notes
-
-<!-- Add any other context about the PR here -->
