@@ -22,13 +22,16 @@ Thank you for considering contributing to lazypick! We're excited to collaborate
   git clone https://github.com/yourusername/lazypick.git
   cd lazypic
   ```
+
 3. After cloning the repo visit to Visit the ["Issues"](https://github.com/sohan01fw/lazypick/issues) and ask for the issue to assign you.
 
 4. After getting assigned create a branch related to that issues (it may be bug/features) and the way creating branch:
-  ```bash
-  git checkout -b [your branch name eg: integrate-gemini-api ]
 
-  ```
+```bash
+git checkout -b [your branch name eg: integrate-gemini-api ]
+
+```
+
 5. Make Changes: Make your desired changes and ensure that your code adheres to our coding standards.
 
 6. Test Locally: Test your changes locally to ensure they work as expected.
