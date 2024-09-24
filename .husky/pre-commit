@@ -1,4 +1,4 @@
 #!/bin/bash
 
-yarn lint-staged -c .lintstagedrc.mjs
+yarn lint-staged -c .lintstagedrc.mjs --allow-empty
 
