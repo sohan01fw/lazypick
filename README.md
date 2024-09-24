@@ -42,7 +42,13 @@ To run LazyPick locally, you'll need to have the following installed:
 
    ```
 
-4. **Now start the development server**:
+4. **Setup the env file (if not present create one)**:
+   look for the .env.example file for necessary keys or variable to insert and step to get any kind of key as follows:
+
+   **For Gemini API key**: please visit [Google Ai Studio](https://aistudio.google.com/app/prompts/new_chat) and generate new api key and
+   copy and paste in your .env file.
+
+5. **Now start the development server**:
    ```bash
    yarn dev
    ```
