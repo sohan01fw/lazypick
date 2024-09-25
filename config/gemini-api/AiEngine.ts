@@ -5,9 +5,9 @@
  * $ npm install @google/generative-ai
  */
 
-const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require("@google/generative-ai");
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const apiKey = process.env.GEMINI_API_KEY;
+const apiKey = process.env.GEMINI_API_KEY || "";
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
@@ -32,5 +32,5 @@ export async function AiEngine(prompt: string) {
   });
 
   const result = await chatSession.sendMessage(prompt);
-  console.log(result.response.text());
+  return result.response.text();
 }
