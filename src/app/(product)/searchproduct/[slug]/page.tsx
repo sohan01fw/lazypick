@@ -1,3 +1,9 @@
-export default function Page({ params }: { params: { slug: string } }) {
-  return <div>My Post: {params.slug}</div>;
+import AiQuestion from "@/components/pages/product/AiQuestion";
+
+export default async function Page() {
+  return (
+    <div>
+      <AiQuestion />
+    </div>
+  );
 }

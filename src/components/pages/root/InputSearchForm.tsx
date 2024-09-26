@@ -8,11 +8,9 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from "@/component
 import { Input } from "@/components/ui/input";
 import { SearchInputFormSchema } from "@/lib/zod";
 import { useRouter } from "next/navigation";
-import { useProductState } from "@/Hooks/store/product/useProductState";
 
 export function InputSearchForm() {
   const router = useRouter();
-  const { setProductName } = useProductState();
   const form = useForm<z.infer<typeof SearchInputFormSchema>>({
     resolver: zodResolver(SearchInputFormSchema),
     defaultValues: {
@@ -25,7 +23,6 @@ export function InputSearchForm() {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     if (!values) return null;
-    setProductName(values?.productname);
     router.push(`/searchproduct/${values?.productname}`);
   }
   return (
