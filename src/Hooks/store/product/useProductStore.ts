@@ -9,7 +9,7 @@ interface ProductStore {
 // Create the store
 const useStore = create<ProductStore>((set) => ({
   productName: "", // initial state
-  setProductName: (name) => set(() => ({ productName: name })), // update state
+  setProductName: () => set((state) => ({ productName: state.productName })), // update state
 }));
 
 export default useStore;
