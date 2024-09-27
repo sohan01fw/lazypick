@@ -5,6 +5,7 @@ import pluginReact from "eslint-plugin-react";
 import eslintPluginPrettier from "eslint-plugin-prettier";
 import unusedImports from "eslint-plugin-unused-imports";
 import tailwind from "eslint-plugin-tailwindcss";
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
 
 export default [
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
@@ -12,12 +13,14 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  eslintPluginUnicorn.configs["flat/recommended"],
   ...tailwind.configs["flat/recommended"], // Flat config for Tailwind
   {
     plugins: {
       prettier: eslintPluginPrettier, // Using 'prettier' here for ESLint-Prettier integration
       unusedImports, // Detects unused imports
       tailwindcss: tailwind, // Ensure the Tailwind plugin is activated
+      unicorns: eslintPluginUnicorn, // Ensure the Unicorn plugin is activated
     },
     rules: {
       // General formatting rules
@@ -27,6 +30,7 @@ export default [
       "prefer-const": "error", // Prefer `const` over `let` where possible
       "no-console": "off", // Warn about `console` statements
       "no-undef": "error", // Disallow undefined variables
+      "unicorn/better-regex": "error",
 
       // React-specific rules
       "react/prop-types": "off", // Disables prop-types checks (often used with TypeScript)
