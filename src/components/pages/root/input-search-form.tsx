@@ -11,7 +11,6 @@ import { useRouter } from "next/navigation";
 
 export function InputSearchForm() {
   const router = useRouter();
-
   const form = useForm<z.infer<typeof SearchInputFormSchema>>({
     resolver: zodResolver(SearchInputFormSchema),
     defaultValues: {
@@ -23,7 +22,7 @@ export function InputSearchForm() {
   function onSubmit(values: z.infer<typeof SearchInputFormSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    if (!values) return null;
+    if (!values) return;
     router.push(`/searchproduct/${values?.productname}`);
   }
   return (
