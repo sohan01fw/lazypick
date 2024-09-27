@@ -1,4 +1,4 @@
-import { SWRProvider } from "@/lib/swr-config/swr-provider";
+import { SWRProvider } from "@/lib/config/swr-config/swr-provider";
 import React from "react";
 
 export const metadata = {

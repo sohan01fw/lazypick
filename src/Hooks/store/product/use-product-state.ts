@@ -1,4 +1,4 @@
-import useStore from "./useProductStore";
+import useStore from "./use-product-store";
 
 // product name state
 export const useProductState = () => {
