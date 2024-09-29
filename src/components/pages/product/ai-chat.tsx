@@ -3,7 +3,7 @@
 import { type CoreMessage } from "ai";
 import React, { useState } from "react";
 import { readStreamableValue } from "ai/rsc";
-import { continueConversation } from "@/lib/actions/ai-actions";
+import { continueConversation } from "@/lib/actions/ai.action";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -29,7 +29,7 @@ export default function AiChat() {
           setInput("");
 
           const result = await continueConversation(newMessages);
-
+          console.log("result", result);
           for await (const content of readStreamableValue(result)) {
             setMessages([
               ...newMessages,
