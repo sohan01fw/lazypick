@@ -17,10 +17,8 @@ export default function AIChat() {
       <div key={currentConversation.length}>{input}</div>,
     ]);
     const message = await continueConversation(input);
-
     setConversation((currentConversation) => [...currentConversation, message]);
   };
-
   return (
     <div>
       <div>
